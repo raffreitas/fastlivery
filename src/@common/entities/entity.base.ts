@@ -10,6 +10,10 @@ export abstract class Entity<Props> {
     this.props = props;
   }
 
+  public get id() {
+    return this._id;
+  }
+
   public equals(entity: Entity<unknown>) {
     if (entity === this) {
       return true;
