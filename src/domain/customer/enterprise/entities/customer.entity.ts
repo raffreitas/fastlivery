@@ -25,4 +25,8 @@ export class Customer extends Entity<CustomerProps> {
 
     return customer;
   }
+
+  get email() {
+    return this.props.email;
+  }
 }
