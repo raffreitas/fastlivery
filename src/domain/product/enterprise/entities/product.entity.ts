@@ -20,4 +20,16 @@ export class Product extends Entity<ProductProps> {
 
     return product;
   }
+
+  get price() {
+    return this.props.price;
+  }
+
+  get quantity() {
+    return this.props.quantity;
+  }
+
+  get name() {
+    return this.props.name;
+  }
 }
