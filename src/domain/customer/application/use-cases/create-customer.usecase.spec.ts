@@ -1,6 +1,7 @@
 import { InMemoryCustomerRepository } from '@test/repositories/in-memory-customer.repository';
 import { CreateCustomerUseCase } from './create-customer.usecase';
 import { CustomerAlreadyExistsError } from './errors/customer-already-exists.error';
+import { makeCustomer } from '@test/factories';
 
 let inMemoryCustomerRepository: InMemoryCustomerRepository;
 let sut: CreateCustomerUseCase;
@@ -32,9 +33,12 @@ describe('CreateCustomerUseCase', () => {
   });
 
   it('should not create a customer if email already exists', async () => {
+    const customer1 = makeCustomer({ email: 'johndoe@email.com' });
+    inMemoryCustomerRepository.items.push(customer1);
+
     const customerInput = {
       name: 'John Doe',
-      email: '',
+      email: 'johndoe@email.com',
       password: '123456',
       isEnterprise: false,
     };
