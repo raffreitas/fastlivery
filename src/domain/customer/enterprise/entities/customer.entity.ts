@@ -29,4 +29,31 @@ export class Customer extends Entity<CustomerProps> {
   get email() {
     return this.props.email;
   }
+
+  get name() {
+    return this.props.name;
+  }
+
+  get password() {
+    return this.props.password;
+  }
+
+  get address() {
+    return this.props.address;
+  }
+
+  get isEnterprise() {
+    return this.props.isEnterprise;
+  }
+
+  get enterpriseName() {
+    return this.props.enterpriseName;
+  }
+
+  get document() {
+    return this.props.document;
+  }
+  get createdAt() {
+    return this.props.createdAt;
+  }
 }
