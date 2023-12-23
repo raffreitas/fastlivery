@@ -1,4 +1,4 @@
-import { InMemoryProductRepository } from '@test/repositories/in-memory-product.respository';
+import { InMemoryProductRepository } from '@test/repositories/in-memory-product.repository';
 import { CreateProductUseCase } from './create-product';
 
 let inMemoryProductRepository: InMemoryProductRepository;
